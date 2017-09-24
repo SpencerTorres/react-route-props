@@ -2,7 +2,10 @@
   "name": "react-route-props",
   "description": "A react router route component for forwarding props to the specified component.",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel src -d dist"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SpencerTorres/react-route-props.git"
@@ -22,5 +25,10 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1"
   }
 }
