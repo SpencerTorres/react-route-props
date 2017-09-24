@@ -25,16 +25,16 @@ import SomeStandaloneComponent from './SomeStandaloneComponent'
 import SomeComponentWithProps from './SomeComponentWithProps'
 
 export default class App extends Component {
-	render() {
-		return (
-  		<Switch>
-				<Route path='/' component={SomeStandaloneComponent}/>
-				<RouteProps path='/route' component={SomeComponentWithProps} someProps={'Stringy String'}/>
+  render() {
+    return (
+      <Switch>
+        <Route path='/' component={SomeStandaloneComponent}/>
+        <RouteProps path='/route' component={SomeComponentWithProps} someProps={'Stringy String'}/>
         <RouteProps exact path='/another' component={SomeComponentWithProps} someProps={'Example String'}/>
-				<RouteProps component={Redirect} to={'/'}/>
-			</Switch>
-		)
-	}
+        <RouteProps component={Redirect} to={'/'}/>
+      </Switch>
+    )
+  }
 }
 ```
 
