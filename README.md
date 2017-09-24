@@ -1,6 +1,6 @@
 # react-route-props
 
-This package is for easily passing extra props into react router's `Route` components. It adds a new component
+This package is for easily passing extra props into react router's `Route` component. It adds a new component called `RouteProps` for achieving this.
 
 ## Install
 
@@ -27,13 +27,13 @@ import SomeComponentWithProps from './SomeComponentWithProps'
 export default class App extends Component {
 	render() {
 		return (
-  			<Switch>
+  		<Switch>
 				<Route path='/' component={SomeStandaloneComponent}/>
 				<RouteProps path='/route' component={SomeComponentWithProps} someProps={'Stringy String'}/>
-                <RouteProps exact path='/another' component={SomeComponentWithProps} someProps={'Example String'}/>
+        <RouteProps exact path='/another' component={SomeComponentWithProps} someProps={'Example String'}/>
 				<RouteProps component={Redirect} to={'/'}/>
 			</Switch>
-    	)
+		)
 	}
 }
 ```
