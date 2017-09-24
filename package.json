@@ -1,7 +1,7 @@
 {
   "name": "react-route-props",
   "description": "A react router route component for forwarding props to the specified component.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/index.js",
   "scripts": {
     "build": "babel src -d dist"
