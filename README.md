@@ -29,7 +29,7 @@ export default class App extends Component {
     return (
       <Switch>
         <Route path='/' component={SomeStandaloneComponent}/>
-        <RouteProps path='/route' component={SomeComponentWithProps} someProps={'Stringy String'}/>
+        <RouteProps path='/route' component={SomeComponentWithProps} someProps={'Stringy String'} moreProps={5}/>
         <RouteProps exact path='/another' component={SomeComponentWithProps} someProps={'Example String'}/>
         <RouteProps component={Redirect} to={'/'}/>
       </Switch>
@@ -38,7 +38,7 @@ export default class App extends Component {
 }
 ```
 
-`RouteProps` is just like `Route` with the difference of being able to pass extra props to the given `component`. Be careful with conflicting prop names for `Route`. To avoid confusion, put these on the left as seen above with `exact`.
+`RouteProps` is just like `Route` with the difference of being able to pass extra props to the given `component`. Be careful with conflicting prop names for `Route`. You should add `Route` props to the left of the `component` prop as seen above with the `exact` prop.
 
 There may be better ways to approach this, but this works for my projects using `react-router-v4`.
 

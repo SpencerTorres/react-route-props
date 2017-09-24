@@ -1,6 +1,17 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-// Render passed component with provided props.
-const renderCombinedProps = (component, ...passProps) => React.createElement(component, Object.assign({}, ...passProps))
-// Export route for forwarding props
-export default (component, ...passProps) => <Route {...passProps} render={routeProps => renderCombinedProps(component, routeProps, passProps)}/>
+
+const renderWithProps = (component, ...passProps) => {
+  const combinedProps = Object.assign({}, ...passProps)
+  return React.createElement(component, combinedProps)
+}
+
+const RouteProps = ({ component, ...passProps }) => {
+  return (
+    <Route {...passProps} render={routeProps => {
+      return renderWithProps(component, routeProps, passProps)
+    }}/>
+  )
+}
+
+export default RouteProps
