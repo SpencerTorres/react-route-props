@@ -1,0 +1,22 @@
+{
+  "name": "react-route-props",
+  "description": "A react router route component for forwarding props to the specified component.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpencerTorres/react-route-props.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SpencerTorres/react-route-props/issues"
+  },
+  "keywords": [
+    "react",
+    "router",
+    "react-router",
+    "props"
+  ],
+  "homepage": "https://github.com/SpencerTorres/react-route-props",
+  "author": "Spencer Torres <spencerdtorres@gmail.com>",
+  "license": "MIT"
+}
